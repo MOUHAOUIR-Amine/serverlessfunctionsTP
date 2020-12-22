@@ -10,14 +10,14 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AuthService} from './service/auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import{environment} from '../environments/environment'
+import{firebase} from '../environments/fi'
 import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(firebase),
     AngularFireAuthModule,
 
     AngularFireMessagingModule,
