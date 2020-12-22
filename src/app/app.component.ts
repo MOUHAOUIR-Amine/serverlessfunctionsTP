@@ -18,6 +18,7 @@ export class AppComponent {
     this.authService.signup(this.email,this.password);
     this.email = this.password='';
   }
+  
   login(){
     this.authService.signIn(this.email,this.password);
     this.email = this.password='';
