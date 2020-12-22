@@ -2,6 +2,11 @@ import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {Observable} from 'rxjs';
 
+import firebase from 'firebase/app'
+
+// then use the full path to get the auth service.
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -31,6 +36,16 @@ export class AuthService {
         return false;
     }
 }
+// Auth logic to run auth providers
+AuthLogin() {
+  return this.firebaseAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+  .then((result) => {
+      console.log('You have been successfully logged in!')
+  }).catch((error) => {
+      console.log(error)
+  })
+}
+
 
  signOut() {
   try {
