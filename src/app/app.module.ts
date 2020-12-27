@@ -12,6 +12,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import{firebase} from '../environments/fi'
 import { FormsModule } from '@angular/forms';
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -27,7 +32,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [    AngularFirestore,AuthService],
+  providers: [    AngularFirestore,AuthService,
+    
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

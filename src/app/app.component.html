@@ -36,15 +36,23 @@
     </button>
     </div>
     
-
+    <br/>
 <!-- Calling GoogleAuth() Api from AuthService -->
 <div class="formGroup">
     <button type="button" (click)="authService.AuthLogin()">
       Log in with Google
     </button>
   </div>
+<br/>
+<!-- Calling FacebookAuth Api from AuthService -->
+<div class="formGroup">
+    <button type="button" (click)="authService.FaceLogin()" >
+       Log in with Facebook
+    </button>
+ </div>
 
 
+ 
     <!-- user click this button to logout -->
     <!-- this button displays only when user is logged-in -->
     <button (click)="logout()" *ngIf="authService.user | async">
@@ -52,4 +60,7 @@
     </button>
     </div>
 
+
+
+    
 <router-outlet></router-outlet>

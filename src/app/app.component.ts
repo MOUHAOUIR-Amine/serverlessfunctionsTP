@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {AuthService} from './service/auth.service';
 
+import { SocialAuthService } from "angularx-social-login";
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,4 +30,10 @@ export class AppComponent {
   logout(){
     this.authService.signOut();
   }
+
+  
+  
+
+  
+
 }

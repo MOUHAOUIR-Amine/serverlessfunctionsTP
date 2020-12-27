@@ -36,6 +36,16 @@ export class AuthService {
         return false;
     }
 }
+signOut() {
+  try {
+       this.firebaseAuth.signOut();
+      return true;
+  } catch (error) {
+      console.log('Sign out failed', error);
+      return false;
+  }
+}
+
 // Auth logic to run auth providers
 AuthLogin() {
   return this.firebaseAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
@@ -47,14 +57,18 @@ AuthLogin() {
 }
 
 
- signOut() {
-  try {
-       this.firebaseAuth.signOut();
-      return true;
-  } catch (error) {
-      console.log('Sign out failed', error);
-      return false;
-  }
+FaceLogin() {
+  return this.firebaseAuth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
+  .then((result) => {
+      console.log('You have been successfully logged in!')
+  }).catch((error) => {
+      console.log(error)
+  })
 }
+
+
+
+
+ 
 
 }
