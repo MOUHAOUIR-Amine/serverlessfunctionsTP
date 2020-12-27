@@ -66,7 +66,10 @@ FaceLogin() {
   })
 }
 
-
+async  loginWithGoogle(){
+  await  this.firebaseAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+ 
+}
 
 
  
