@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve --ssl true --ssl-key ./node_modules/browser-sync/certs/server.key  --ssl-cert ./node_modules/browser-sync/certs/server.crt",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -38,6 +38,7 @@
     "@angular/compiler-cli": "^11.0.4",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "browser-sync": "^2.26.13",
     "codelyzer": "^6.0.0",
     "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~3.6.0",

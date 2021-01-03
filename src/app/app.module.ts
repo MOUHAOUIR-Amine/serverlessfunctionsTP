@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import{firebase} from '../environments/fi'
 import { FormsModule } from '@angular/forms';
 
-
+import  {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -30,7 +30,9 @@ import { FormsModule } from '@angular/forms';
 
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
+    HttpClientModule
   ],
   providers: [    AngularFirestore,AuthService,
     
